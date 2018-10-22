@@ -1,0 +1,16 @@
+idApplication,Sum,CreditState,Currency,Client_idClient
+1,4000,Returned,Dollar,1
+2,5000,"Not returned",Dollar,4
+3,7500,Returned,Euro,6
+4,3200,"Not returned",Gryvnia,2
+5,3700,Returned,Gryvnia,3
+6,4100,Returned,Dollar,1
+7,15100,"Not returned",Gryvnia,9
+8,25600,"Not returned",Dollar,10
+9,12300,"Not returned",Gryvnia,8
+10,9700,Returned,Dollar,5
+11,9000,"Not returned",Gryvnia,7
+12,8100,"Not returned",Dollar,3
+13,4400,"Not returned",Euro,8
+14,2700,Returned,Dollar,10
+15,6600,"Not returned",Euro,3

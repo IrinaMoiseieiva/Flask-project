@@ -1,0 +1,11 @@
+idClient,FirstName,LastName,Education,Passport,City,Age,Department_idDepartment
+1,Roman,Beregulak,high,KC249584,Lviv,25,2
+2,Mariya,Pehnyk,high,KC350156,Stryi,29,2
+3,Olena,Fedychkanych,middle,KC850145,Krasne,19,1
+4,Igor,Petriv,technic,KC853952,Kyiv,21,4
+5,Volodymyr,Gryniv,high,KC849153,Skvyra,35,4
+6,Oleg,Fedyshyn,high,KC012412,Lviv,42,5
+7,Taras,Sobko,middle,KC249504,Rivne,20,3
+8,Viktor,Spas,technic,KC823412,Kyiv,22,2
+9,Julia,Mokina,technic,KC908295,Kyiv,21,1
+10,Oksana,Indusiva,high,KC723532,Sambir,32,1
