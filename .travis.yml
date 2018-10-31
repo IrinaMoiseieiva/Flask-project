@@ -1,0 +1,16 @@
+language: python
+sudo: required
+
+services:
+  - mysql
+
+python:
+  - "3.6"
+before_install:
+  - mysql -e "create user iteatest identified by 'iteatest';"
+  - mysql -e "create database iteatest;"
+  - mysql -e "grant all privileges on iteatest.* to iteatest;"
+install:
+  - pip install -r requirements.txt
+script:
+  - pytest -svx tests.py

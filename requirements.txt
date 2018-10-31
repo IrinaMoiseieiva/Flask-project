@@ -2,5 +2,7 @@ flask
 sqlalchemy
 mysql
 redis
-sqlalchemy
+pytest
+bs4
+lxml
 gevent
