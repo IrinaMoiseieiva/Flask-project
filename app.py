@@ -1,7 +1,6 @@
 from flask import Flask, render_template,  request, redirect, url_for, session as flask_session
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from pymongo import MongoClient
 from gevent.pywsgi import WSGIServer
 from models import (
     Base, Department,
