@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% block title%}
+<title>Departments detail</title>
+{% endblock %}
+{% block content%}
+<div id="content-wrapper">
+
+        <div class="container-fluid">
+
+          <!-- Breadcrumbs-->
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">Tables</li>
+          </ol>
+
+          <!-- DataTables Example -->
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fas fa-table"></i>
+              Data Table Example</div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>id</th>
+                      <th>First name</th>
+                      <th>Last name</th>
+                      <th>Education</th>
+                      <th>Passport</th>
+                      <th>City</th>
+                      <th>Age</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                  <tr>
+                      <th>id</th>
+                      <th>First name</th>
+                      <th>Last name</th>
+                      <th>Education</th>
+                      <th>Passport</th>
+                      <th>City</th>
+                      <th>Age</th>
+                  </tr>
+                  </tfoot>
+                  <tbody>
+                    {% for client in clients %}
+                    <tr>
+                      <td>{{client.id}}</td>
+                      <td>{{client.first_name}}</td>
+                      <td>{{client.last_name}}</td>
+                      <td>{{client.education}}</td>
+                      <td>{{client.passport}}</td>
+                      <td>{{client.city}}</td>
+                      <td>{{client.age}}</td>
+                    </tr>
+                    {%endfor%}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+          </div>
+
+          <p class="small text-center text-muted my-5">
+          </p>
+
+        </div>
+
+         <!-- /.container-fluid -->
+         <div class="container">
+          <div class="card card-login mx-auto mt-5">
+            <div class="card-header">Delete client</div>
+            <div class="card-body">
+              <form method= "post">
+                <div class="form-group">
+                  <div class="form-label-group">
+                    <input type="text" id="inputFirstName" class="form-control" placeholder="First name" autofocus="autofocus" name ="first_name">
+                    <label for="inputFirstName">First name</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-label-group">
+                    <input type="text" id="inputLastName" class="form-control" placeholder="Last Name"  name ="last_name">
+                    <label for="inputLastName">Last Name</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-label-group">
+                    <input type="text" id="inputEducation" class="form-control" placeholder="Education" autofocus="autofocus" name ="education">
+                    <label for="inputEducation">Education</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-label-group">
+                    <input type="text" id="inputPassport" class="form-control" placeholder="Passport"  autofocus="autofocus" name ="passport">
+                    <label for="inputPassport">Passport</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-label-group">
+                    <input type="text" id="inputCity" class="form-control" placeholder="City" autofocus="autofocus" name ="city">
+                    <label for="inputCity">City</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-label-group">
+                    <input type="text" id="inputAge" class="form-control" placeholder="Age" autofocus="autofocus" name ="age">
+                    <label for="inputAge">Age</label>
+                  </div>
+                </div>
+  
+                <div class="form-group">
+  
+                </div>
+                <input class="btn btn-primary btn-block" type = "submit" value = "Delete client">
+              </form>
+            </div>
+          </div>    
+
+        </div>
+
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright © Your Website 2018</span>
+            </div>
+          </div>
+        </footer>
+
+</div>
+{% endblock %}   

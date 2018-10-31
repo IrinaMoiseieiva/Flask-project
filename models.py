@@ -2,6 +2,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, ForeignKey, Boolean
 from sqlalchemy.orm import relationship, backref
 
+
 Base = declarative_base()
 
 class Department(Base):
@@ -24,6 +25,14 @@ class Client(Base):
 
     department = relationship("Department", backref=backref("clients", order_by=id))
 
+class User(Base):
+    __tablename__ = 'users'
+    id = Column(Integer, primary_key=True)
+    login = Column(String(32))
+    password = Column(String(32))
+    email = Column(String(32), unique = True)
+
+    
 class Application(Base):
     __tablename__ = 'applications'
     id = Column(Integer, primary_key=True)
@@ -32,3 +41,5 @@ class Application(Base):
     currency = Column(String(32))
     client_id = Column(Integer, ForeignKey("clients.id"))
     client = relationship("Client", backref=backref("applications", order_by=id))
+
+

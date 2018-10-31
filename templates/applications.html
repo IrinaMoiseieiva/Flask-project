@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title%}
+<title>Application</title>
+{% endblock %}
+{% block content%}
+<div id="content-wrapper">
+
+    <div class="container-fluid">
+
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Tables</li>
+      </ol>
+
+      <!-- DataTables Example -->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fas fa-table"></i>
+          Data Table Example</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>id</th>
+                  <th>Suma</th>
+                  <th>Credit state</th>
+                  <th>Currency</th>
+                  <th>Client name </th>
+                  <th>Delete client</th>
+
+                 
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                    <th>id</th>
+                    <th>Suma</th>
+                    <th>Credit state</th>
+                    <th>Currency</th>
+                    <th>Client name </th>
+                    <th>Delete client</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                {% for application in applications %}
+                <tr>
+                  <td>{{application.id}}</td>
+                  <td>{{application.suma}}</td>
+                  <td>{{application.credit_state}}</td>
+                  <td>{{application.currency}}</td>
+                  <td>{{application.client.first_name}}</td>
+                  <td><a href="{{url_for('applications', application_id = application.id )}}">Delete</a></td>
+                </tr>
+                {%endfor%}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+
+      <p class="small text-center text-muted my-5">
+      </p>
+
+    </div>
+
+    <!-- Sticky Footer -->
+    <footer class="sticky-footer">
+      <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+          <span>Copyright © Your Website 2018</span>
+        </div>
+      </div>
+    </footer>
+
+</div>
+{% endblock %} 
