@@ -12,19 +12,18 @@ from utils import login_required
 app = Flask(__name__)
 
 
+
 @app.route('/')
 def index():
    return render_template('index.html')
 
-@app.route('/login', methods = ['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
         user = app.session.query(User).filter(User.email == email,
                                           User.password == password).one_or_none()
-        
         if user:
             flask_session['logged_in'] = user.email
             return redirect(url_for('departments'))
@@ -105,21 +104,17 @@ def delete_client(department_id = None):
 
 
 
-@app.route('/register', methods = ['GET', 'POST'])
+@app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
-        
         if not app.session.query(User).filter(User.email == request.form['email']).one_or_none():
-            login = request.form['login']
-            password = request.form['password']
-            email = request.form['email']
-            add_user = User(login = login, password = password, 
-                                        email = email)
-            app.session.add(add_user)
-            app.session.commit()
-            return redirect('/login')
-
-        
+           login = request.form['login']
+           password = request.form['password']
+           email = request.form['email']
+           new_user = User(login=login,password=password, email=email)
+           app.session.add(new_user)
+           app.session.commit()
+        return redirect(url_for('login'))
     return render_template('register.html')
 
 def main():
