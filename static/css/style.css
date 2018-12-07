@@ -1,0 +1,99 @@
+
+
+.button2{	
+	border-radius: 50px;
+    /*background: linear-gradient(to bottom, #5E46FB, #8A79FD); */
+
+    background: #5e46fb;
+    background: -moz-linear-gradient(top,  #5e46fb 0%, #8a79fd 100%);
+    background: -webkit-linear-gradient(top,  #5e46fb 0%,#8a79fd 100%);
+    background: linear-gradient(to bottom,  #5e46fb 0%,#8a79fd 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5e46fb', endColorstr='#8a79fd',GradientType=0 );
+
+    transition:0.5s;
+	text-decoration: none;
+	color: #fff;
+    font: bold 1.5rem 'Arial';
+	display: inline-block;
+	padding: 14px 28px 12px 28px;
+	letter-spacing: 0.4px;
+	text-align: center;
+	position: relative; 
+	overflow: hidden;
+    min-width: 370px;
+    text-decoration: none;
+}
+.button2:hover {
+	color: #fff;
+	/*background: #BD2FA7;*/
+    /*background: linear-gradient(to bottom, #BD2FA7, #BD2FA7); */
+    background: #bd2fa7;
+    background: -moz-linear-gradient(top,  #bd2fa7 0%, #bd2fa7 100%);
+    background: -webkit-linear-gradient(top,  #bd2fa7 0%,#bd2fa7 100%);
+    background: linear-gradient(to bottom,  #bd2fa7 0%,#bd2fa7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bd2fa7', endColorstr='#bd2fa7',GradientType=0 );
+    text-decoration: none;
+}
+
+
+
+.masterclass-general{
+    text-align: center;
+	padding: 50px 0 50px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ff445f+0,fe9e61+100 */
+    background: #1e5799; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #1e5799 0%, #ff445f 0%, #fe9e61 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #1e5799 0%,#ff445f 0%,#fe9e61 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #1e5799 0%,#ff445f 0%,#fe9e61 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#fe9e61',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.masterclass-general .row {
+    justify-content: center;
+}
+.masterclass-general div {
+    width: 100%;
+}
+
+.masterclass-general p{
+    color: #fff;
+}
+.masterclass-general .main-title{
+	font: bold 3.0625rem 'Arial';
+	margin-bottom: 37px;
+    letter-spacing: -1px;
+
+}
+.masterclass-general .main-title strong{
+    text-transform: uppercase;
+    letter-spacing: 2.1px;
+
+}
+.masterclass-general .style1{
+	font: 1.5rem 'Arial';
+    margin-bottom: 26px;
+}
+.masterclass-general .style1 strong{
+    font:  bold 1.5rem 'Arial';    
+    color: #FFF972;
+}
+.masterclass-general .style1 strong a {
+    color: #FFF972;
+    font: bold 1.5rem 'Arial';    
+}
+.masterclass-general .style2{
+    font: 1.5rem 'Arial'; 
+    line-height: 1.2;
+    margin-bottom: 62px;   
+    
+}
+
+
+.masterclass-general .btn{
+    padding: 29px 0;
+}
+
+#wrapper #content-wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+}
